@@ -1,7 +1,8 @@
 "use client";
 
 import Header from "@/components/Header";
-import { Check } from "lucide-react";
+import Footer from "@/components/Footer";
+import { Check, Star } from "lucide-react";
 import Link from "next/link";
 
 export default function Pricing() {
@@ -9,58 +10,58 @@ export default function Pricing() {
     {
       name: "ETW Core",
       price: "4 900€",
-      period: "90 jours",
-      description: "Plan complet avec support personnalisé",
+      period: "60 days",
+      description: "Complete plan with personalized support",
       features: [
-        "90 jours de coaching",
-        "Plan complet personnalisé",
-        "2 calls/semaine",
-        "Support par message 5/7",
-        "Suivi nutrition & training",
-        "Accès communauté privée"
+        "60 days of coaching",
+        "Complete personalized plan",
+        "2 calls per week",
+        "Message support 5/7",
+        "Nutrition & training tracking",
+        "Private community access"
       ],
-      cta: "CHOISIR ETW CORE",
+      cta: "CHOOSE ETW CORE",
       ctaLink: "/etw-core",
       popular: false,
-      color: "border-[#C4A84A]"
+      color: "border-primary-gold"
     },
     {
       name: "ETW Advanced",
       price: "7 500€",
-      period: "90 jours",
-      description: "Coaching intensif avec adaptations hebdomadaires",
+      period: "90 days",
+      description: "Intensive coaching with weekly adaptations",
       features: [
-        "90 jours de coaching",
+        "90 days of coaching",
         "Daily check-ins",
-        "Adaptations hebdo du training + nutrition",
-        "Support 7/7",
-        "Appels illimités (priorité)",
-        "Suivi biofeedback",
-        "Accès communauté privée"
+        "Weekly training + nutrition adaptations",
+        "24/7 support",
+        "Unlimited calls (priority)",
+        "Biofeedback tracking",
+        "Private community access"
       ],
-      cta: "CHOISIR ETW ADVANCED",
+      cta: "CHOOSE ETW ADVANCED",
       ctaLink: "/etw-advanced",
       popular: true,
-      color: "border-[#E74C3C]"
+      color: "border-primary-red"
     },
     {
       name: "ETW Elite",
       price: "9 900€",
-      period: "90 jours",
-      description: "Coaching complet avec biofeedback tracking",
+      period: "90 days",
+      description: "Complete coaching with biofeedback tracking",
       features: [
-        "90 jours de coaching",
-        "Coaching complet",
+        "90 days of coaching",
+        "Complete coaching program",
         "Daily access + biofeedback tracking",
-        "2h onboarding + roadmap de maintenance",
-        "Support 7/7 priorité absolue",
-        "Appels illimités",
-        "Option suivi mensuel prolongé (payant)"
+        "2h onboarding + maintenance roadmap",
+        "24/7 absolute priority support",
+        "Unlimited calls",
+        "Extended monthly follow-up option (paid)"
       ],
-      cta: "CHOISIR ETW ELITE",
+      cta: "CHOOSE ETW ELITE",
       ctaLink: "/etw-elite",
       popular: false,
-      color: "border-[#C4A84A]"
+      color: "border-primary-gold"
     }
   ];
 
@@ -69,26 +70,99 @@ export default function Pricing() {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#212121] to-[#1a1a1a]">
-          <div className="container mx-auto max-w-6xl text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Choose Your <span className="text-[#E74C3C]">Transformation</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
-              From a free audit to complete 1-on-1 coaching. Pick the level of support that fits your goals and budget.
-            </p>
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-black">
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+            <div className="absolute inset-0 opacity-30">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `
+                  radial-gradient(circle at 30% 70%, rgba(220,38,38,0.15) 0%, transparent 60%),
+                  radial-gradient(circle at 70% 30%, rgba(245,158,11,0.1) 0%, transparent 60%)
+                `,
+              }}></div>
+            </div>
+          </div>
+          
+          <div className="container mx-auto relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="mb-8">
+                <span className="inline-block bg-primary-red/20 text-primary-red px-4 py-2 rounded-full text-sm font-semibold border border-primary-red/30">
+                  CHOOSE YOUR TRANSFORMATION
+                </span>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-display text-white mb-8 leading-tight">
+                Choose Your <span className="text-primary-red relative">
+                  Transformation
+                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-primary-gold" />
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+                From a free audit to complete 1-on-1 coaching. Pick the level of support that fits your goals and budget.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/free-audit"
+                  className="bg-primary-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors duration-200"
+                >
+                  GET YOUR FREE AUDIT
+                </Link>
+                <Link 
+                  href="/protocol"
+                  className="border-2 border-primary-gold text-primary-gold px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-gold hover:text-black transition-colors duration-200"
+                >
+                  SEE THE PROTOCOL
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-primary-gold mb-2">30+</div>
+                <div className="text-sm text-white/70 font-semibold">CLIENTS TRANSFORMED</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-primary-red mb-2">60-90</div>
+                <div className="text-sm text-white/70 font-semibold">DAYS PROGRAM</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">100%</div>
+                <div className="text-sm text-white/70 font-semibold">NATURAL METHODS</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-primary-gold mb-2">24/7</div>
+                <div className="text-sm text-white/70 font-semibold">SUPPORT</div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Pricing Cards */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1a1a1a]">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
+                Choose Your <span className="text-primary-red">Package</span>
+              </h2>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+                Three levels of support to match your commitment and goals.
+              </p>
+            </div>
+            
             <div className="grid md:grid-cols-3 gap-8">
               {packages.map((pkg, index) => (
-                <div key={index} className={`relative bg-[#212121] p-8 rounded-lg border-2 ${pkg.color} ${pkg.popular ? 'scale-105' : ''} hover:border-opacity-100 transition-all duration-300`}>
+                <div key={index} className={`relative bg-gray-800 p-8 rounded-xl border-2 ${pkg.color} ${pkg.popular ? 'scale-105 shadow-2xl' : ''} hover:border-opacity-100 transition-all duration-300 hover-lift`}>
                   {pkg.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-[#E74C3C] text-white px-4 py-2 rounded-full text-sm font-bold">
+                      <span className="bg-primary-red text-white px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                        <Star size={16} />
                         MOST POPULAR
                       </span>
                     </div>
@@ -106,7 +180,7 @@ export default function Pricing() {
                   <ul className="space-y-4 mb-8">
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3">
-                        <Check className="text-[#C4A84A] flex-shrink-0" size={20} />
+                        <Check className="text-primary-gold flex-shrink-0" size={20} />
                         <span className="text-white/90">{feature}</span>
                       </li>
                     ))}
@@ -114,10 +188,10 @@ export default function Pricing() {
 
                   <Link 
                     href={pkg.ctaLink}
-                    className={`block w-full text-center py-4 px-6 rounded-md font-bold text-lg transition-colors ${
+                    className={`block w-full text-center py-4 px-6 rounded-lg font-bold text-lg transition-colors ${
                       pkg.popular 
-                        ? 'bg-[#E74C3C] text-white hover:bg-[#C0392B]' 
-                        : 'bg-[#C4A84A] text-[#212121] hover:bg-[#B39840]'
+                        ? 'bg-primary-red text-white hover:bg-red-700' 
+                        : 'bg-primary-gold text-black hover:bg-yellow-400'
                     }`}
                   >
                     {pkg.cta}
@@ -129,17 +203,26 @@ export default function Pricing() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1a1a] to-[#212121]">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-              Frequently Asked <span className="text-[#C4A84A]">Questions</span>
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
+                Frequently Asked <span className="text-primary-gold">Questions</span>
+              </h2>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto">
+                Everything you need to know before starting your transformation.
+              </p>
+            </div>
             
             <div className="space-y-6">
               {[
                 {
+                  q: "What are the payment options?",
+                  a: "We offer flexible payment plans: 50% upfront + 50% at day 30, or 50% upfront + 25% at day 30 + 25% at day 60. All payments are processed securely through third-party providers."
+                },
+                {
                   q: "What if I don't see results?",
-                  a: "The protocol is based on proven principles. If you follow it consistently for 90 days and don't see significant improvements in strength, energy, and body composition, I'll work with you to identify what's missing."
+                  a: "If you don't see results after 30 days of following the program, you may request a refund. We're confident in our methods, but we want you to be satisfied."
                 },
                 {
                   q: "Do I need a gym membership?",
@@ -147,16 +230,16 @@ export default function Pricing() {
                 },
                 {
                   q: "How much time does it take?",
-                  a: "Training: 3 sessions per week, 45-60 minutes each. Nutrition prep: 2-3 hours per week. The rest is about making better choices throughout your day."
+                  a: "Training: 3 to 4 sessions per week, 45-60 minutes each. Nutrition prep: 2-3 hours per week. The rest is about making better choices throughout your day."
                 },
                 {
                   q: "Is this suitable for beginners?",
                   a: "Absolutely. The protocol starts with fundamentals and progresses systematically. I've worked with complete beginners who've achieved incredible transformations."
                 }
               ].map((faq, index) => (
-                <div key={index} className="bg-[#212121] p-6 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.q}</h3>
-                  <p className="text-white/80">{faq.a}</p>
+                <div key={index} className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary-red/30 transition-all duration-300 hover-lift">
+                  <h3 className="text-xl font-bold text-white mb-4">{faq.q}</h3>
+                  <p className="text-white/80 leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -164,24 +247,40 @@ export default function Pricing() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#212121]">
-          <div className="container mx-auto max-w-4xl text-center">
-            <div className="bg-gradient-to-r from-[#E74C3C] to-[#C0392B] p-8 rounded-lg">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-black">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center">
+              <div className="mb-8">
+                <span className="inline-block bg-primary-red/20 text-primary-red px-6 py-3 rounded-full text-lg font-bold border border-primary-red/30">
+                  READY TO TRANSFORM?
+                </span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
                 Ready to Transform?
               </h2>
-              <p className="text-white/90 mb-6 text-lg">
+              
+              <p className="text-xl text-white/80 mb-12 max-w-3xl mx-auto">
                 Start with a free audit and see what's possible for your transformation.
               </p>
-              <Link 
-                href="/free-audit"
-                className="inline-block bg-[#C4A84A] text-[#212121] px-8 py-4 rounded-md font-bold text-lg hover:bg-[#B39840] transition-colors"
-              >
-                CLAIM YOUR FREE AUDIT
-              </Link>
+              
+              <div className="space-y-4">
+                <Link 
+                  href="/free-audit"
+                  className="inline-block bg-primary-gold text-black px-12 py-6 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-colors duration-200"
+                >
+                  CLAIM YOUR FREE AUDIT
+                </Link>
+                
+                <p className="text-white/60 text-sm">
+                  Free consultation • No commitment • Start today
+                </p>
+              </div>
             </div>
           </div>
         </section>
+
+        <Footer />
       </main>
     </>
   );

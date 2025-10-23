@@ -314,22 +314,70 @@ html {
   border-color: #F59E0B;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Simplified text system */
+.text-primary-white {
+  color: #FFFFFF;
 }
 
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
+.text-primary-off-white {
+  color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #E74C3C;
-  border-radius: 4px;
+.text-primary-red {
+  color: #DC2626;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #C0392B;
+.text-size-large {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-size-medium {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-size-small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-brush {
+  font-family: var(--font-brush);
+}
+
+/* Simplified animations - only essential ones */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Minimal hover effects */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
 }
 
 ::-webkit-scrollbar-track {
@@ -343,4 +391,203 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #C4A84A;
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Fire ember animation */
+@keyframes fire-ember {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1); 
+    opacity: 0; 
+  }
+  10% { 
+    opacity: 1; 
+  }
+  50% { 
+    transform: translateY(-50vh) translateX(10px) scale(0.8); 
+    opacity: 0.8; 
+  }
+  90% { 
+    opacity: 0.3; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(-20px) scale(0.3); 
+    opacity: 0; 
+  }
+}
+
+@keyframes fire-ember-fast {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1); 
+    opacity: 0; 
+  }
+  5% { 
+    opacity: 1; 
+  }
+  50% { 
+    transform: translateY(-50vh) translateX(5px) scale(0.6); 
+    opacity: 0.7; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(-10px) scale(0.2); 
+    opacity: 0; 
+  }
+}
+
+@keyframes fire-ember-slow {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1); 
+    opacity: 0; 
+  }
+  15% { 
+    opacity: 1; 
+  }
+  50% { 
+    transform: translateY(-50vh) translateX(15px) scale(0.9); 
+    opacity: 0.8; 
+  }
+  90% { 
+    opacity: 0.4; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(-25px) scale(0.4); 
+    opacity: 0; 
+  }
+}
+
+@keyframes fire-ember-ultra-fast {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1); 
+    opacity: 0; 
+  }
+  3% { 
+    opacity: 1; 
+  }
+  50% { 
+    transform: translateY(-50vh) translateX(3px) scale(0.5); 
+    opacity: 0.8; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(-5px) scale(0.1); 
+    opacity: 0; 
+  }
+}
+
+@keyframes fire-ember-very-slow {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1); 
+    opacity: 0; 
+  }
+  20% { 
+    opacity: 1; 
+  }
+  50% { 
+    transform: translateY(-50vh) translateX(20px) scale(0.95); 
+    opacity: 0.7; 
+  }
+  90% { 
+    opacity: 0.5; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(-30px) scale(0.5); 
+    opacity: 0; 
+  }
+}
+
+.animate-fire-ember {
+  animation: fire-ember linear infinite;
+}
+
+.animate-fire-ember-fast {
+  animation: fire-ember-fast linear infinite;
+}
+
+.animate-fire-ember-slow {
+  animation: fire-ember-slow linear infinite;
+}
+
+.animate-fire-ember-ultra-fast {
+  animation: fire-ember-ultra-fast linear infinite;
+}
+
+.animate-fire-ember-very-slow {
+  animation: fire-ember-very-slow linear infinite;
+}
+
+/* Realistic fire animation */
+@keyframes fire-realistic {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1) rotate(0deg); 
+    opacity: 0; 
+  }
+  5% { 
+    opacity: 1; 
+  }
+  20% { 
+    transform: translateY(-15vh) translateX(5px) scale(1.1) rotate(45deg); 
+    opacity: 0.9; 
+  }
+  40% { 
+    transform: translateY(-35vh) translateX(-10px) scale(0.9) rotate(120deg); 
+    opacity: 0.7; 
+  }
+  60% { 
+    transform: translateY(-55vh) translateX(15px) scale(0.7) rotate(200deg); 
+    opacity: 0.5; 
+  }
+  80% { 
+    transform: translateY(-75vh) translateX(-20px) scale(0.4) rotate(300deg); 
+    opacity: 0.3; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(25px) scale(0.1) rotate(450deg); 
+    opacity: 0; 
+  }
+}
+
+@keyframes fire-realistic-alt {
+  0% { 
+    transform: translateY(0) translateX(0) scale(1) rotate(0deg); 
+    opacity: 0; 
+  }
+  5% { 
+    opacity: 1; 
+  }
+  20% { 
+    transform: translateY(-15vh) translateX(-8px) scale(1.2) rotate(-30deg); 
+    opacity: 0.9; 
+  }
+  40% { 
+    transform: translateY(-35vh) translateX(12px) scale(0.8) rotate(-90deg); 
+    opacity: 0.7; 
+  }
+  60% { 
+    transform: translateY(-55vh) translateX(-18px) scale(0.6) rotate(-180deg); 
+    opacity: 0.5; 
+  }
+  80% { 
+    transform: translateY(-75vh) translateX(22px) scale(0.3) rotate(-270deg); 
+    opacity: 0.3; 
+  }
+  100% { 
+    transform: translateY(-100vh) translateX(-25px) scale(0.1) rotate(-360deg); 
+    opacity: 0; 
+  }
+}
+
+.animate-fire-realistic {
+  animation: fire-realistic ease-out infinite;
+}
+
+.animate-fire-realistic-alt {
+  animation: fire-realistic-alt ease-out infinite;
 }

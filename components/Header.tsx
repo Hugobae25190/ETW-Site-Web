@@ -8,10 +8,12 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-2xl font-bold text-white">
-              ESCAPE THE <span className="text-[#E74C3C] group-hover:text-[#C4A84A] transition-colors">WEAKNESS</span>
-            </span>
+          <Link href="/" className="flex items-center group">
+            <img 
+              src="/logo-scorpion.webp" 
+              alt="Escape The Weakness" 
+              className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
