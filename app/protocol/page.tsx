@@ -1,7 +1,6 @@
 "use client";
 
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Dumbbell, Apple, Zap, Moon, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -11,25 +10,25 @@ export default function Protocol() {
       icon: Dumbbell,
       title: "Training Protocol",
       subtitle: "Build Real Strength",
-      description: "Progressive overload system. Compound movements. Strength-focused programming that builds functional muscle.",
+      description: "Understand how your body works to build functional muscle and strength.",
       details: [
-        "3x per week compound movements",
+        "4x per week compound movements",
         "Progressive overload tracking",
-        "Form-first approach",
-        "Recovery-based programming"
+        "biologically advanced program",
+        "science-backed approach"
       ],
       color: "red"
     },
     {
       icon: Apple,
-      title: "Nutrition Protocol", 
+      title: "Nutrition Protocol",
       subtitle: "Fuel Your Hormones",
       description: "Hormone-optimizing nutrition. Real food. Strategic timing. No more energy crashes or brain fog.",
       details: [
         "Hormone-supporting macros",
         "Strategic meal timing",
         "Real food focus",
-        "Supplement optimization"
+        "No need for 100s of supplements"
       ],
       color: "gold"
     },
@@ -49,12 +48,12 @@ export default function Protocol() {
     {
       icon: Moon,
       title: "Recovery Protocol",
-      subtitle: "Sleep & Stress Mastery", 
+      subtitle: "Sleep & Stress Mastery",
       description: "Recovery is where growth happens. Master your sleep, manage stress, optimize your environment.",
       details: [
         "Sleep hygiene protocols",
-        "Stress reduction techniques",
-        "Recovery tracking",
+        "Full recovery program",
+        "Energy tracking",
         "Environment optimization"
       ],
       color: "gold"
@@ -70,15 +69,18 @@ export default function Protocol() {
           <div className="absolute inset-0 bg-black">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
             <div className="absolute inset-0 opacity-30">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `
-                  radial-gradient(circle at 30% 70%, rgba(220,38,38,0.15) 0%, transparent 60%),
-                  radial-gradient(circle at 70% 30%, rgba(245,158,11,0.1) 0%, transparent 60%)
-                `,
-              }}></div>
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `
+                    radial-gradient(circle at 30% 70%, rgba(220,38,38,0.15) 0%, transparent 60%),
+                    radial-gradient(circle at 70% 30%, rgba(245,158,11,0.1) 0%, transparent 60%)
+                  `
+                }}
+              ></div>
             </div>
           </div>
-          
+
           <div className="container mx-auto relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
@@ -86,28 +88,28 @@ export default function Protocol() {
                   THE COMPLETE SYSTEM
                 </span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-display text-white mb-8 leading-tight">
                 The <span className="text-primary-red relative">
                   60-90 Day Protocol
                   <span className="absolute -bottom-1 left-0 w-full h-1 bg-primary-gold" />
                 </span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-                The complete system I used to transform from 108kg of weakness to 78kg of solid muscle.
+                The complete system I used to transform from former obese to stronger than ever.
                 <br />
-                <span className="text-primary-gold font-semibold">Benching 100kg for reps. Testosterone optimized. Energy through the roof.</span>
+                <span className="text-primary-gold font-semibold">-35kg of fat. Testosterone optimized. Energy through the roof.</span>
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   href="/free-audit"
                   className="bg-primary-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors duration-200"
                 >
                   GET YOUR FREE AUDIT
                 </Link>
-                <Link 
+                <Link
                   href="/pricing"
                   className="border-2 border-primary-gold text-primary-gold px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-gold hover:text-black transition-colors duration-200"
                 >
@@ -127,12 +129,12 @@ export default function Protocol() {
                 <div className="text-sm text-white/70 font-semibold">DAYS</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary-red mb-2">+200%</div>
+                <div className="text-4xl font-bold text-primary-red mb-2">+100%</div>
                 <div className="text-sm text-white/70 font-semibold">TESTOSTERONE</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white mb-2">100kg</div>
-                <div className="text-sm text-white/70 font-semibold">BENCH PRESS</div>
+                <div className="text-4xl font-bold text-white mb-2">-35kg</div>
+                <div className="text-sm text-white/70 font-semibold">OF PURE FAT</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-primary-gold mb-2">100%</div>
@@ -153,25 +155,28 @@ export default function Protocol() {
                 Four essential components that work together to transform your body, energy, and life.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {pillars.map((pillar, index) => (
-                <div key={index} className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary-red/30 transition-all duration-300 hover-lift">
+                <div
+                  key={index}
+                  className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary-red/30 transition-all duration-300 hover-lift"
+                >
                   <div className="flex items-start space-x-6 mb-6">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 ${
-                      pillar.color === 'red' ? 'bg-primary-red' : 'bg-primary-gold'
-                    }`}>
+                    <div
+                      className={`w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 ${
+                        pillar.color === "red" ? "bg-primary-red" : "bg-primary-gold"
+                      }`}
+                    >
                       <pillar.icon className="text-white" size={32} />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">{pillar.title}</h3>
                       <p className="text-primary-gold text-lg font-semibold mb-4">{pillar.subtitle}</p>
-                      <p className="text-white/80 leading-relaxed mb-6">
-                        {pillar.description}
-                      </p>
+                      <p className="text-white/80 leading-relaxed mb-6">{pillar.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3">
                     {pillar.details.map((detail, detailIndex) => (
                       <div key={detailIndex} className="flex items-center space-x-3">
@@ -197,29 +202,32 @@ export default function Protocol() {
                 Here's exactly what to expect during your transformation journey.
               </p>
             </div>
-            
+
             <div className="space-y-8">
               {[
-                { 
-                  week: "Weeks 1-3", 
-                  title: "Foundation Building", 
+                {
+                  week: "Weeks 1-3",
+                  title: "Foundation Building",
                   desc: "Establish habits, learn the basics, start seeing initial changes in energy and strength.",
                   results: ["+20% energy", "Better sleep", "Initial strength gains"]
                 },
-                { 
-                  week: "Weeks 4-6", 
-                  title: "Acceleration Phase", 
+                {
+                  week: "Weeks 4-6",
+                  title: "Acceleration Phase",
                   desc: "Rapid progress. Strength gains accelerate. Body composition changes become visible.",
                   results: ["+40% strength", "Visible muscle", "Mental clarity"]
                 },
-                { 
-                  week: "Weeks 7-9", 
-                  title: "Transformation Complete", 
+                {
+                  week: "Weeks 7-9",
+                  title: "Transformation Complete",
                   desc: "Peak performance. Optimal body composition. Unstoppable energy and confidence.",
                   results: ["Peak testosterone", "Maximum strength", "Unstoppable confidence"]
                 }
               ].map((phase, index) => (
-                <div key={index} className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary-gold/30 transition-all duration-300 hover-lift">
+                <div
+                  key={index}
+                  className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-primary-gold/30 transition-all duration-300 hover-lift"
+                >
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center space-x-4">
                       <div className="bg-primary-gold text-black px-4 py-2 rounded-lg font-bold text-lg">
@@ -229,12 +237,15 @@ export default function Protocol() {
                     </div>
                     <ArrowRight className="text-primary-gold" size={24} />
                   </div>
-                  
+
                   <p className="text-white/80 text-lg mb-6 leading-relaxed">{phase.desc}</p>
-                  
+
                   <div className="flex flex-wrap gap-3">
                     {phase.results.map((result, i) => (
-                      <span key={i} className="bg-primary-red/20 text-primary-red px-3 py-1 rounded-full text-sm font-semibold">
+                      <span
+                        key={i}
+                        className="bg-primary-red/20 text-primary-red px-3 py-1 rounded-full text-sm font-semibold"
+                      >
                         {result}
                       </span>
                     ))}
@@ -254,15 +265,15 @@ export default function Protocol() {
                   READY TO START?
                 </span>
               </div>
-              
+
               <h2 className="text-4xl md:text-5xl font-display text-white mb-6">
                 Ready to Start Your Transformation?
               </h2>
-              
+
               <p className="text-xl text-white/80 mb-12 max-w-3xl mx-auto">
                 Get the complete protocol and start your 90-day journey to strength, energy, and confidence.
               </p>
-              
+
               <div className="space-y-4">
                 <Link
                   href="/free-audit"
@@ -270,7 +281,7 @@ export default function Protocol() {
                 >
                   GET YOUR FREE AUDIT NOW
                 </Link>
-                
+
                 <p className="text-white/60 text-sm">
                   Free consultation • No commitment • Start today
                 </p>
@@ -283,7 +294,6 @@ export default function Protocol() {
         <footer className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 border-t border-gray-800">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-4 gap-8 mb-8">
-              {/* Company Info */}
               <div className="md:col-span-2">
                 <div className="flex items-center mb-4">
                   <img
@@ -294,7 +304,7 @@ export default function Protocol() {
                   <span className="text-white font-bold text-xl">Escape The Weakness</span>
                 </div>
                 <p className="text-white/70 mb-4 max-w-md">
-                  Transform your body, energy, and confidence with our proven 60-90 day protocol. 
+                  Transform your body, energy, and confidence with our proven 60-90 day protocol.
                   Natural methods, real results.
                 </p>
                 <div className="flex space-x-4">
@@ -310,7 +320,6 @@ export default function Protocol() {
                 </div>
               </div>
 
-              {/* Quick Links */}
               <div>
                 <h3 className="text-white font-bold mb-4">Quick Links</h3>
                 <ul className="space-y-2">
@@ -321,7 +330,6 @@ export default function Protocol() {
                 </ul>
               </div>
 
-              {/* Contact */}
               <div>
                 <h3 className="text-white font-bold mb-4">Contact</h3>
                 <ul className="space-y-2">
@@ -332,7 +340,6 @@ export default function Protocol() {
               </div>
             </div>
 
-            {/* Legal */}
             <div className="border-t border-gray-800 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <p className="text-white/60 text-sm">
@@ -355,7 +362,7 @@ export default function Protocol() {
               </div>
             </div>
           </div>
-        <Footer />
+        </footer>
       </main>
     </>
   );

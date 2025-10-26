@@ -258,7 +258,7 @@ export default function Home() {
                 <div className="text-sm text-white/70 font-semibold">CLIENTS TRANSFORMED</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary-red mb-2">+200%</div>
+                <div className="text-4xl font-bold text-primary-red mb-2">+100%</div>
                 <div className="text-sm text-white/70 font-semibold">TESTOSTERONE BOOST</div>
               </div>
               <div>
@@ -336,10 +336,10 @@ export default function Home() {
                 The <span className="text-primary-gold">90-Day Solution</span>
               </h2>
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-                I went from 108kg of pure weakness to 70kg shredded, then built back to 78kg of solid muscle.
+                Optimise your lifestyle to lose fat, build muscle and rise your Testosterone 100% naturally and science-backed.
               </p>
               <div className="inline-block bg-primary-gold/20 text-primary-gold px-6 py-3 rounded-lg font-semibold">
-                Benching 100kg for reps. Testosterone optimized. Energy through the roof.
+                Lost 35kg of fat. Testosterone optimized. Energy through the roof.
               </div>
             </div>
             
@@ -387,7 +387,7 @@ export default function Home() {
                     <span className="text-white/80">Bench Press</span>
                     <div className="text-right">
                       <div className="text-primary-red font-bold">60kg</div>
-                      <div className="text-primary-gold font-bold">100kg+</div>
+                      <div className="text-primary-gold font-bold">140kg+</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center py-4">
@@ -493,7 +493,7 @@ export default function Home() {
                   name: "Marcus, 34",
                   role: "Software Engineer",
                   before: "108kg, no energy",
-                  after: "78kg, benching 100kg",
+                  after: "78kg, benching 140kg",
                   testimonial: "I went from couch potato to gym beast in 90 days. My testosterone levels skyrocketed. My wife can't believe the transformation.",
                   rating: 5,
                   results: ["-30kg fat", "+40% strength", "2x testosterone"]
